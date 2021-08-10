@@ -1,0 +1,17 @@
+{
+  "name": "bluex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "2.1.2",
+    "purgecss": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "purgeit": "purgecss -css dist/css/bootstrap.min.css --output dist/css/prod.min.css --content *.html **/*.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

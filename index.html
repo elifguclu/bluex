@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlueX</title>
+
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav
+      class="main-nav d-flex justify-content-around flex-column"
+      id="main-nav"
+    >
+      <div class="list-group m-0 p-0">
+        <img src="dist/img/logo.png" class="align-self-center mx-auto mb-5" />
+        <a
+          href="#"
+          class="list-group-item list-group-item-action leftMenu text-white pl-4"
+        >
+          <div class="d-flex justify-content-start">
+            <span
+              class="iconify text-white leftMenuIcon"
+              data-icon="clarity:home-line"
+              data-inline="false"
+            >
+            </span>
+            <p class="text-white ml-3">Dashboard</p>
+          </div>
+        </a>
+
+        <a
+          href="#"
+          class="list-group-item list-group-item-action leftMenu text-white pl-4"
+        >
+          <div class="d-flex justify-content-start">
+            <span
+              class="iconify text-white leftMenuIcon mt-1"
+              data-icon="ic:baseline-card-membership"
+              data-inline="false"
+            ></span>
+            <p class="text-white ml-3">Member</p>
+          </div>
+        </a>
+
+        <a
+          href="#"
+          class="list-group-item list-group-item-action leftMenu text-white pl-4"
+        >
+          <div class="d-flex justify-content-start">
+            <span
+              class="iconify text-white leftMenuIcon mt-1"
+              data-icon="bpmn:intermediate-event-throw-message"
+              data-inline="false"
+            ></span>
+            <p class="text-white ml-3">Messages</p>
+          </div>
+        </a>
+
+        <a
+          href="#"
+          class="list-group-item list-group-item-action leftMenu text-white pl-4"
+        >
+          <div class="d-flex justify-content-start">
+            <span
+              class="iconify text-white leftMenuIcon"
+              data-icon="bi:chat-dots"
+              data-inline="false"
+            ></span>
+            <p class="text-white ml-3">
+              Chat Support
+              <span href="#" class="ml-2 badge badge-danger rounded-circle"
+                >2</span
+              >
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="#"
+          class="list-group-item list-group-item-action leftMenu text-white pl-4"
+        >
+          <div class="d-flex justify-content-start">
+            <span
+              class="iconify text-white leftMenuIcon"
+              data-icon="ion:mail-open-outline"
+              data-inline="false"
+            ></span>
+            <p class="text-white ml-3">Mail</p>
+          </div>
+        </a>
+
+        <a
+          href="#"
+          class="list-group-item list-group-item-action leftMenu text-white pl-4"
+        >
+          <div class="d-flex justify-content-start">
+            <span
+              class="iconify text-white leftMenuIcon mt-1"
+              data-icon="carbon:report"
+              data-inline="false"
+            ></span>
+            <p class="text-white ml-3">Report</p>
+          </div>
+        </a>
+      </div>
+      <div class="list-group p-5"></div>
+      <div class="list-group">
+        <a
+          href="#"
+          class="list-group-item list-group-item-action leftMenu text-white pl-4 align-self-end"
+        >
+          <div class="d-flex justify-content-start">
+            <span
+              class="iconify text-white leftMenuIcon mt-1"
+              data-icon="ion:log-out-outline"
+              data-inline="false"
+            ></span>
+            <p class="text-white ml-3">Log Out</p>
+          </div>
+        </a>
+      </div>
+    </nav>
+
+    <div class="page-wrap">
+      <header class="main-header fixed-top">
+        <div
+          class="navbarStyle p-4 d-flex justify-content-start align-items-stretch"
+        >
+          <div class="d-flex justify-content-start w-100 align-items-center">
+            <a href="#main-nav" class="open-menu">
+              <span
+                class="iconify menuIcon text-white"
+                data-icon="heroicons-solid:menu"
+                data-inline="false"
+              >
+              </span>
+            </a>
+            <a href="#" class="close-menu">
+              <span
+                class="iconify menuIcon text-white"
+                data-icon="heroicons-solid:menu"
+                data-inline="false"
+              >
+              </span>
+            </a>
+            <a href="#" class="menu text-white font-weight-bold">Menu</a>
+            <form class="form-inline mt-2 mt-md-0 w-100">
+              <div class="input-placeholder w-100">
+                <input
+                  type="text"
+                  required
+                  class="form-control mr-sm-2 place navSearchInput px-4 py-4 border-0 w-100"
+                />
+                <div class="placeholder text-truncate d-inline-block">
+                  <span
+                    class="iconify searchIcon"
+                    data-icon="bx:bx-search-alt-2"
+                    data-inline="false"
+                  ></span>
+                  Search somethings here...
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <a class="nav-link active text-white font-weight-bold" href="#"
+              >Dashboard</a
+            >
+            <a class="nav-link text-white" href="#">Member</a>
+            <a class="nav-link text-white" href="#">Report</a>
+            <a class="nav-link text-white" href="#">Help</a>
+            <a class="nav-link text-white position-relative" href="#">
+              <span
+                class="iconify notiIcon text-white"
+                data-icon="ic:baseline-notifications"
+                data-inline="false"
+              ></span>
+              <div class="rounded-circle notiTop"></div>
+            </a>
+          </div>
+          <div class="d-flex justify-content-start align-items-center">
+            <div class="clearfix d-flex">
+              <div class="float-left text-right mt-3">
+                <p class="text-white navText">Baba Voss</p>
+                <p class="text-white navText d-inline-block text-nowrap">
+                  Super Administrator
+                </p>
+              </div>
+              <div class="float-right ml-3">
+                <img
+                  src="http://via.placeholder.com/70x70"
+                  class="rounded-circle"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="row d-flex align-items-stretch">
+          <div class="col-7">
+            <div class="d-flex border-0 chartDiv p-4 align-items-stretch">
+              <div class="d-flex flex-column w-100">
+                <p class="chartText">Sales Report</p>
+                <canvas class="mt-4 barChartStyle" id="barChart"></canvas>
+              </div>
+              <div class="ml-5 d-flex flex-column justify-content-around">
+                <div class="chartData py-2 pl-3 pr-5">
+                  <p class="dataHeader">Total Scales</p>
+                  <p class="dataText">26,750</p>
+                </div>
+                <div class="chartData my-3 py-2 pl-3 pr-5">
+                  <p class="dataHeader">Total Refund</p>
+                  <p class="dataText">81</p>
+                </div>
+                <div class="chartData py-2 pl-3 pr-5">
+                  <p class="dataHeader">Total Income</p>
+                  <p class="dataText">
+                    <span class="money align-top">$</span>148,763
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="mt-4 h-100">
+              <button class="btn chartChangeBtn py-2 px-md-2 px-4 w-100">
+                Yearly
+              </button>
+              <button class="btn chartChangeBtn my-3 py-2 px-md-1 px-3 w-100">
+                Monthly
+              </button>
+              <button class="btn chartChangeBtn py-2 px-md-2 px-4 w-100">
+                Daily
+              </button>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="d-flex flex-column topSales p-4 h-100">
+              <div class="">
+                <p class="topSalesHeader">Yearly Top Sales</p>
+              </div>
+              <div class="d-flex justify-content-between mt-3">
+                <div class="d-flex">
+                  <img
+                    class="rounded-circle"
+                    src="http://via.placeholder.com/50x50"
+                  />
+                  <div class="ml-3 align-self-center">
+                    <p class="topSalesContentHeader">Package 01</p>
+                    <p class="topSalesContentText">Beauty center spa welles</p>
+                  </div>
+                </div>
+                <p class="topSalesMoney align-self-center">$12,650</p>
+              </div>
+              <div class="d-flex justify-content-between mt-3">
+                <div class="d-flex">
+                  <img
+                    class="rounded-circle"
+                    src="http://via.placeholder.com/50x50"
+                  />
+                  <div class="ml-3 align-self-center">
+                    <p class="topSalesContentHeader">Package 63</p>
+                    <p class="topSalesContentText">Beauty center spa welles</p>
+                  </div>
+                </div>
+                <p class="topSalesMoney align-self-center">$1,860</p>
+              </div>
+              <div class="d-flex justify-content-between mt-3">
+                <div class="d-flex">
+                  <img
+                    class="rounded-circle"
+                    src="http://via.placeholder.com/50x50"
+                  />
+                  <div class="ml-3 align-self-center">
+                    <p class="topSalesContentHeader">Package 14</p>
+                    <p class="topSalesContentText">Beauty center spa welles</p>
+                  </div>
+                </div>
+                <p class="topSalesMoney align-self-center">$81,12</p>
+              </div>
+              <div class="d-flex justify-content-between mt-3">
+                <div class="d-flex">
+                  <img
+                    class="rounded-circle"
+                    src="http://via.placeholder.com/50x50"
+                  />
+                  <div class="ml-3 align-self-center">
+                    <p class="topSalesContentHeader">Package 07</p>
+                    <p class="topSalesContentText">Beauty center spa welles</p>
+                  </div>
+                </div>
+                <p class="topSalesMoney align-self-center">$21,11</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4 d-flex align-items-stretch">
+          <div class="col-5 one">
+            <div class="d-flex flex-column justify-content-between h-100">
+              <div class="d-flex flex-column member py-3 px-4 h-100">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item px-0 mx-0">
+                    <div
+                      class="d-flex justify-content-between align-items-stretch"
+                    >
+                      <div class="align-self-center">
+                        <p class="memberHeader">Total</p>
+                        <p class="memberHeader">Member</p>
+                      </div>
+                      <div class="d-flex clearfix align-items-stretch">
+                        <div class="align-self-center float-left">
+                          <img class="" src="dist/img/greenIcon.png" />
+                        </div>
+                        <div class="ml-3 float-right">
+                          <p class="memberContentHeader">Last Year</p>
+                          <p class="memberContentText">1,457,062</p>
+                        </div>
+                      </div>
+                      <div class="align-self-center">
+                        <p class="memberValue">1,632,407</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item px-0 mx-0">
+                    <div
+                      class="d-flex justify-content-between align-items-stretch"
+                    >
+                      <div class="align-self-center">
+                        <p class="memberHeader">Active</p>
+                        <p class="memberHeader">Member</p>
+                      </div>
+                      <div class="d-flex clearfix align-items-stretch">
+                        <div class="align-self-center float-left">
+                          <img class="" src="dist/img/redIcon.png" />
+                        </div>
+                        <div class="ml-3 float-right">
+                          <p class="memberContentHeader">Last Year</p>
+                          <p class="memberContentText">1,457,062</p>
+                        </div>
+                      </div>
+                      <div class="align-self-center">
+                        <p class="memberValue">801,366</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item px-0 mx-0">
+                    <div
+                      class="d-flex justify-content-between align-items-stretch"
+                    >
+                      <div class="align-self-center">
+                        <p class="memberHeader">Deleted</p>
+                        <p class="memberHeader">Member</p>
+                      </div>
+                      <div class="d-flex clearfix align-items-stretch">
+                        <div class="align-self-center float-left">
+                          <img class="" src="dist/img/greenIcon.png" />
+                        </div>
+                        <div class="ml-3 float-right">
+                          <p class="memberContentHeader">Last Year</p>
+                          <p class="memberContentText">1,457,062</p>
+                        </div>
+                      </div>
+                      <div class="align-self-center">
+                        <p class="memberValue">23,884</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="newMember d-flex justify-content-between py-3 px-4 mt-4"
+              >
+                <div class="">
+                  <p class="newMemberHeader">New</p>
+                  <p class="newMemberHeader">Member</p>
+                </div>
+                <div class="align-items-stretch d-flex clearfix">
+                  <div class="align-self-center float-left">
+                    <span class="upIconSpan p-3 rounded-circle">
+                      <img src="dist/img/upIcon.png" class="" />
+                    </span>
+                  </div>
+                  <div class="mx-2 float-right align-self-center">
+                    <p class="newMemberSubHeader">This Year</p>
+                    <p class="newMemberValue">+2116</p>
+                  </div>
+                </div>
+                <div class="align-items-stretch d-flex clearfix">
+                  <div class="align-self-center float-left">
+                    <span class="downIconSpan p-3 rounded-circle">
+                      <img src="dist/img/downIcon.png" class="" />
+                    </span>
+                  </div>
+                  <div class="mx-2 align-self-center float-right">
+                    <p class="newMemberSubHeader">This Month</p>
+                    <p class="newMemberValue">+73</p>
+                  </div>
+                </div>
+                <div class="align-items-stretch d-flex clearfix">
+                  <div class="align-self-center float-left">
+                    <span class="upIconSpan p-3 rounded-circle">
+                      <img src="dist/img/upIcon.png" class="" />
+                    </span>
+                  </div>
+                  <div class="mx-2 align-self-center float-right">
+                    <p class="newMemberSubHeader">Today</p>
+                    <p class="newMemberValue">+8</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3 two">
+            <div class="d-flex flex-column topSales p-4 h-100">
+              <div class="">
+                <p class="supportHeader">
+                  Yearly Support
+                  <a href="#" class="ml-2 badge badge-danger rounded-circle"
+                    >6</a
+                  >
+                </p>
+              </div>
+              <div class="mt-3">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item px-0 mx-0">
+                    <div class="d-flex justify-content-between">
+                      <div class="">
+                        <img
+                          class="rounded-circle"
+                          src="http://via.placeholder.com/50x50"
+                        />
+                      </div>
+                      <div
+                        class="ml-4 d-flex flex-column w-100 align-items-stretch"
+                      >
+                        <div class="">
+                          <div class="d-flex clearfix">
+                            <div class="float-left w-100">
+                              <p class="supportContentHeader">Steve Bold</p>
+                              <p class="supportContentSubHeader">
+                                Real Estate Owner
+                              </p>
+                            </div>
+                            <div class="float-right align-self-center">
+                              <p class="supportContentTime">14.21</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mt-2">
+                          <p class="supportContentText text-left">
+                            Lorem ipsum dolor si met, Steve Bold has a great
+                            experience and skills regarding this category.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item px-0 mx-0">
+                    <div class="d-flex justify-content-between">
+                      <div class="">
+                        <img
+                          class="rounded-circle"
+                          src="http://via.placeholder.com/50x50"
+                        />
+                      </div>
+                      <div
+                        class="ml-4 d-flex flex-column w-100 align-items-stretch"
+                      >
+                        <div class="">
+                          <div class="d-flex clearfix">
+                            <div class="float-left w-100">
+                              <p class="supportContentHeader">
+                                Marcio De Lahoya
+                              </p>
+                              <p class="supportContentSubHeader">
+                                Normal Costumer
+                              </p>
+                            </div>
+                            <div class="float-right align-self-center">
+                              <p class="supportContentTime">08.13</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mt-2">
+                          <p class="supportContentText text-left">
+                            Marcio is a freelancer, ha has a great experience
+                            and skills that can be used for team.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item px-0 mx-0">
+                    <div class="d-flex justify-content-between">
+                      <div class="">
+                        <img
+                          class="rounded-circle"
+                          src="http://via.placeholder.com/50x50"
+                        />
+                      </div>
+                      <div
+                        class="ml-4 d-flex flex-column w-100 align-items-stretch"
+                      >
+                        <div class="">
+                          <div class="d-flex clearfix">
+                            <div class="float-left w-100">
+                              <p class="supportContentHeader">Luigi Mario</p>
+                              <p class="supportContentSubHeader">
+                                Yoga Instructor
+                              </p>
+                            </div>
+                            <div class="float-right align-self-center">
+                              <p class="supportContentTime">06.08</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mt-2">
+                          <p class="supportContentText text-left">
+                            Lorem ipsum dolor si met, Luigi Mario has a great
+                            experience and skills regarding this category.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item mt-3 mb-0 p-0 mx-0">
+                    <div class="d-flex justify-content-end">
+                      <a class="supportAllTicket">See All Ticket</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 three">
+            <div class="d-flex flex-column latestSales p-4 h-100">
+              <div class="d-flex justify-content-between">
+                <p class="latestSalesHeader ml-3">Latest Sales</p>
+                <p class="latestSalesHeader mr-3">+206</p>
+              </div>
+              <div
+                class="d-flex justify-content-between mt-3 py-2 px-3 latestWhite"
+              >
+                <div class="d-flex">
+                  <div class="align-self-center">
+                    <p class="latestSalesContentHeader">Dani Daniels</p>
+                    <p class="latestSalesContentText">MelBourne</p>
+                  </div>
+                </div>
+                <p class="latestSalesDate align-self-center">25 Aug 2019</p>
+                <p class="latestSalesMoney align-self-center">$21,11</p>
+              </div>
+              <div
+                class="d-flex justify-content-between mt-3 py-2 px-3 latestGray"
+              >
+                <div class="d-flex">
+                  <div class="align-self-center">
+                    <p class="latestSalesContentHeader">Baba Voss</p>
+                    <p class="latestSalesContentText">MelBourne</p>
+                  </div>
+                </div>
+                <p class="latestSalesDate align-self-center">25 Aug 2019</p>
+                <p class="latestSalesMoney align-self-center">$21,11</p>
+              </div>
+              <div
+                class="d-flex justify-content-between mt-3 py-2 px-3 latestWhite"
+              >
+                <div class="d-flex">
+                  <div class="align-self-center">
+                    <p class="latestSalesContentHeader">Nathan W.E</p>
+                    <p class="latestSalesContentText">MelBourne</p>
+                  </div>
+                </div>
+                <p class="latestSalesDate align-self-center">25 Aug 2019</p>
+                <p class="latestSalesMoney align-self-center">$21,11</p>
+              </div>
+              <div
+                class="d-flex justify-content-between mt-3 py-2 px-3 latestGray"
+              >
+                <div class="d-flex">
+                  <div class="align-self-center">
+                    <p class="latestSalesContentHeader">Lee Min Ho</p>
+                    <p class="latestSalesContentText">MelBourne</p>
+                  </div>
+                </div>
+                <p class="latestSalesDate align-self-center">25 Aug 2019</p>
+                <p class="latestSalesMoney align-self-center">$21,11</p>
+              </div>
+              <div
+                class="d-flex justify-content-between mt-3 py-2 px-3 latestWhite"
+              >
+                <div class="d-flex">
+                  <div class="align-self-center">
+                    <p class="latestSalesContentHeader">Jonathan Davis</p>
+                    <p class="latestSalesContentText">MelBourne</p>
+                  </div>
+                </div>
+                <p class="latestSalesDate align-self-center">25 Aug 2019</p>
+                <p class="latestSalesMoney align-self-center">$21,11</p>
+              </div>
+              <div class="d-flex justify-content-end">
+                <a class="latestSeeAll mr-3 mt-2">See All Transaction</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script></script>
+    <script src="dist/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="dist/js/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/main.prod.js"></script>
+  </body>
+</html>
